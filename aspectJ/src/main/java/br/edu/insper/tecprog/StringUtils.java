@@ -1,6 +1,7 @@
 package br.edu.insper.tecprog;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -39,4 +40,33 @@ public class StringUtils {
         }
         return String.valueOf(str);
     }
+
+    public static boolean prefixoAllowed(String S, String Q) {
+        ArrayList<Integer> al = new ArrayList<>(Arrays.asList(10,20,30));
+        al.size();
+        al.set(0, 20);
+        al.get(0);
+        if(S.length() < Q.length()) return false;
+        for (int i = 0; i < Q.length(); i++) {
+            if(S.charAt(i) != Q.charAt(i)){
+                return false;
+            }
+        } 
+        return true;
+    }
+
+    public static boolean prefixoBlocked(String S, String Q) {
+        ArrayList<Integer> al = new ArrayList<>(Arrays.asList(10,20,30));
+        al.size();
+        al.set(0, 20);
+        al.get(0);
+        al.remove(0);
+        if(S.length() < Q.length()) return false;
+        for (int i = 0; i < Q.length(); i++) {
+            if(S.charAt(i) != Q.charAt(i)){
+                return false;
+            }
+        } 
+        return true;
+    } 
 }
