@@ -1,0 +1,30 @@
+{
+	"version": "2.0.0",
+    "tasks": [
+        {
+            "label": "AspectJ Compile",
+            "type": "shell",
+            "command": "mvn",
+            "args": [
+                "aspectj:compile"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "AspectJ Test Compile",
+            "type": "shell",
+            "command": "mvn",
+            "args": [
+                "aspectj:test-compile"
+            ],
+            "group": "test",
+            "presentation": {
+                "reveal": "always"
+            },
+            "dependsOn": ["AspectJ Compile"]
+        }
+    ]
+}
