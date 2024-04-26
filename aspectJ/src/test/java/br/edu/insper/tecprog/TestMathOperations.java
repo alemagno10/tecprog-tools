@@ -8,7 +8,7 @@ public class TestMathOperations {
     void testFactorialRec() {
         MathOperations math = new MathOperations();
         int res = math.factorialRec(5);
-        int depth = RecursionDepth.getInstance().getDepth();
+        int depth = RecursionDepth.aspectOf().getDepth();
         System.out.println(depth);
         assert depth > 4;
         assert res == 120;
@@ -18,7 +18,7 @@ public class TestMathOperations {
     void testFactorialIter() {
         MathOperations math = new MathOperations();
         int res = math.factorialIter(5);
-        int depth = RecursionDepth.getInstance().getDepth();
+        int depth = RecursionDepth.aspectOf().getDepth();
         System.out.println(depth);
         assert depth > 4;
         assert res == 120;

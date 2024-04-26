@@ -3,5 +3,6 @@
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
         "/path/to/aspectjrt.jar"
-    ]
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
 }
