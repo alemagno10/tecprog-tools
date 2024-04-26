@@ -4,11 +4,10 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 
-@Aspect
+@Aspect("perthis(methodCall())")
 public class RecursionDepth {
 
-    private static RecursionDepth instance = new RecursionDepth();
-    private int depth = 0;
+    private static int depth = 0;
 
     @Pointcut("execution(* MathOperations.factorialRec(..)) || execution(* MathOperations.factorialIter(..))")
     public void methodCall(){}
@@ -19,16 +18,12 @@ public class RecursionDepth {
         System.out.println("Depth incremented: " + depth);
     }
 
-    public static RecursionDepth getInstance() {
-        return instance;
-    }
-
-    public int getDepth() {
-        System.out.println("dd "+depth);
+    public static int getDepth() {
+        System.out.println("depth: "+depth);
         return depth;
     }
 
-    public void resetDepth() {
+    public static void resetDepth() {
         depth = 0;
     }
 }
