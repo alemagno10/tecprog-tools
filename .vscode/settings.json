@@ -1,7 +1,0 @@
-{
-    "java.project.sourcePaths": ["src/main/java", "src/main/aspect"],
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "/path/to/aspectjrt.jar"
-    ]
-}
